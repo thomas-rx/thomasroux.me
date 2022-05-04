@@ -14,7 +14,7 @@
 
 <div align="center">
   <a href="https://www.xrths.fr">
-    <img src="src/images/portfolio/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/images/ressources/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">www.xrths.fr</h3>
