@@ -1,5 +1,3 @@
-const production = process.env.NODE_ENV === 'production';
-
 module.exports = {
   url: `https://www.xrths.fr`,
   logo: `src/images/ressources/logo.png`,
