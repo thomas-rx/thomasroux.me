@@ -1,20 +1,28 @@
+const config = require("./src/data/config");
+
 module.exports = {
     siteMetadata: {
-        title: `Thomas ROUX - Portfolio`,
+        title: config.defaultTitle,
+        description: config.description,
+        keywords: config.keywords,
+        username: config.username,
+        email: config.email,
 
-        description: `Développeur web indépendant sur Perpignan.
-        Réalisation de projets, site internet, optimisation de notoriété numérique (SEO).`,
+        canonicalUrl: config.url,
+        siteUrl: config.url,
 
-        keywords: ['test', 'keyword'],
-        username: `@xrths`,
-        canonicalUrl: `https://www.xrths.fr`,
-        siteUrl: `https://www.xrths.fr`,
-        linkedinLink: `https://www.linkedin.com/in/xrths/`,
-        githubLink: `https://github.com/xrths`,
-        twitterLink: `https://twitter.com/xrths`,
-        maltLink: `https://www.malt.fr/profile/xrths`,
-        email: `contact@xrths.fr`,
-        wordlyLink: 'https://wordly.xrths.fr',
+        wordlyUrl: config.projectLinks.wordly,
+        linkedinUrl: config.socialLinks.linkedin,
+        githubUrl: config.socialLinks.github,
+        twitterUrl: config.socialLinks.twitter,
+        maltUrl: config.socialLinks.malt,
+
+        matomo: {
+            siteId: config.matomo.siteId,
+            urlBase: config.matomo.urlBase,
+            trackerUrl: config.matomo.trackerUrl,
+            srcUrl: config.matomo.srcUrl,
+        },
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -22,13 +30,13 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `GatsbyJS`,
-                short_name: `GatsbyJS`,
+                name: config.title,
+                short_name: config.shortName,
                 start_url: `/`,
                 background_color: `#fff`,
                 theme_color: `#fff`,
                 display: `standalone`,
-                icon: `src/images/portfolio/logo.png`,
+                icon: config.logo,
             },
         },
     ],
