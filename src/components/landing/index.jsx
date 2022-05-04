@@ -56,8 +56,8 @@ export default function PageContent({ data }) {
           return (
             <div id='fullpage-wrapper'>
               <SectionTitle
-                title='Thomas ROUX'
-                btnText='Découvrir mon portfolio'
+                title='Thomas R.'
+                btnText='Découvrir'
                 fullpageApi={fullpageApi}
               />
 
@@ -75,8 +75,8 @@ export default function PageContent({ data }) {
                   'devicon-css3-plain-wordmark',
                   'devicon-javascript-plain',
                 ]}
-                githubLink={data.site.siteMetadata.githubLink + '/Wordly'}
-                gameLink={data.site.siteMetadata.wordlyLink}
+                githubLink={data.site.siteMetadata.githubUrl + '/Wordly'}
+                gameLink={data.site.siteMetadata.wordlyUrl}
                 pictures={[
                   [
                     WordlyImage,
@@ -153,7 +153,7 @@ export default function PageContent({ data }) {
                   'devicon-twitter-original text-[30px]',
                   'devicon-jupyter-plain-wordmark',
                 ]}
-                githubLink={data.site.siteMetadata.githubLink + '/COVID19_FR'}
+                githubLink={data.site.siteMetadata.githubUrl + '/COVID19_FR'}
                 pictures={[
                   [
                     CovidFranceImage,
@@ -195,7 +195,7 @@ export default function PageContent({ data }) {
                   'devicon-gatsby-plain text-[30px]',
                 ]}
                 pictures={[[PortfolioImage, 'Illustration', 'Illustration']]}
-                githubLink={data.site.siteMetadata.githubLink + '/www.xrths.fr'}
+                githubLink={data.site.siteMetadata.githubUrl + '/www.xrths.fr'}
               />
 
               <SectionTitle
@@ -212,7 +212,7 @@ export default function PageContent({ data }) {
                   `Durant cette expérience, j'ai pu découvrir l'organisation du système d'information dans une infrastructure aussi critique.`,
                   `J'ai découvert comment s'organisait le service informatique d'un établissement comptant plus de 10 000 appareils sur son réseau.`,
                 ]}
-                linkedinLink={data.site.siteMetadata.linkedinLink}
+                linkedinLink={data.site.siteMetadata.linkedinUrl}
                 pictures={[[HospitalImage, 'Illustration', 'Illustration']]}
               />
 
@@ -223,15 +223,15 @@ export default function PageContent({ data }) {
                   `J'ai eu l'occasion d'intégrer la société pour un stage de fin d'études.`,
                   `Au sein du bureau d'études, j'ai assisté les équipes dans le développement de leurs projets.`,
                 ]}
-                linkedinLink={data.site.siteMetadata.linkedinLink}
+                linkedinLink={data.site.siteMetadata.linkedinUrl}
                 pictures={[[PyrescomImage, 'Illustration', 'Illustration']]}
               />
 
               <SectionContact
-                linkedinLink={data.site.siteMetadata.linkedinLink}
-                githubLink={data.site.siteMetadata.githubLink}
+                linkedinLink={data.site.siteMetadata.linkedinUrl}
+                githubLink={data.site.siteMetadata.githubUrl}
                 mail={data.site.siteMetadata.email}
-                maltLink={data.site.siteMetadata.maltLink}
+                maltLink={data.site.siteMetadata.maltUrl}
               />
             </div>
           );
