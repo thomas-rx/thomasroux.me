@@ -1,40 +1,29 @@
-# Name of workflow
-name: Development workflow
-
-# When workflow is triggered
+name: Build and Deploy to Netlify
 on:
   push:
     branches:    
       - '*'
       - '*/*'
       - '**'
-      - '!master'   # excludes master
+      - '!master'
 
-# Jobs to carry out
 jobs:
-  deploy:
-    # Operating system to run job on
-    runs-on: ubuntu-latest
-
-    # Steps in job
+  build:
+    runs-on: ubuntu-18.04
     steps:
-      # Get code from repo
-      - name: Checkout code
-        uses: actions/checkout@v1
-      # Install NodeJS
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
         with:
-          node-version: 12.x
-      # Run npm install and build on our code
-      - run: npm install
-      - run: npm run build --if-present
-      # Deploy to Netlify using our dev secrets
-      - name: Deploy to netlify
-        uses: netlify/actions/cli@master
+          publish-dir: './public'
+          production-branch: master
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=build --prod
-          secrets: '["DEV_NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1     secrets: '["DEV_NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
