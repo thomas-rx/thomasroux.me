@@ -1,6 +1,6 @@
 import { useMatomo } from '@datapunt/matomo-tracker-react';
 import ReactFullpage from '@fullpage/react-fullpage';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import HospitalImage from '../../images/pro/hopital.jpeg';
 import PyrescomImage from '../../images/pro/iot.jpeg';
@@ -20,13 +20,17 @@ import { SectionTitle } from './SectionTitle';
 
 export default function PageContent({ data }) {
   const { trackEvent } = useMatomo();
-  const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
-  let LogoImage = LogoWhiteImage;
-  if (darkThemeMq.matches) {
-    LogoImage = LogoWhiteImage;
-  } else {
-    LogoImage = LogoBlackImage;
-  }
+
+  let logoImage = LogoWhiteImage;
+
+  useEffect(() => {
+    const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
+    if (darkMode.matches) {
+      logoImage = LogoWhiteImage;
+    } else {
+      logoImage = LogoBlackImage;
+    }
+  }, []);
 
   return (
     <div className='dark:bg-gray-800 dark:text-white font-ubuntu'>
@@ -72,7 +76,7 @@ export default function PageContent({ data }) {
                 name='À propos'
                 pictures={[
                   [
-                    LogoImage,
+                    logoImage,
                     'Hopital Perpignan',
                     'Hopital Perpignan',
                     'w-[40%] md:w-[40%]',
