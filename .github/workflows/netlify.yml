@@ -20,10 +20,10 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: './public'
-          production-branch: master
+          production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
-          enable-commit-comment: true
+          production-deploy: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
