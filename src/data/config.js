@@ -4,11 +4,26 @@ module.exports = {
   defaultTitle: `Thomas ROUX - Portfolio`,
   shortName: `Thomas R.`,
   author: `Thomas ROUX`,
-  keywords: ['test', 'keyword'],
+  keywords: [
+    'Thomas',
+    'ROUX',
+    'Perpignan',
+    'Développeur',
+    'Web',
+    'Site',
+    'Internet',
+    'Agence',
+    'Création',
+    'Développement',
+    'Malt',
+    'Toulouse',
+    'Paris',
+    'Île-De-France',
+  ],
   username: `@xrths`,
   email: `contact@xrths.fr`,
   description: `Développeur web indépendant sur Perpignan.
-    Réalisation de projets, site internet, optimisation de notoriété numérique (SEO).`,
+    Réalisation de projets, création de sites internet, optimisation de notoriété (SEO).`,
 
   socialLinks: {
     linkedin: `https://www.linkedin.com/in/xrths`,

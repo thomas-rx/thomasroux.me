@@ -26,7 +26,10 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-sitemap`,
+        {
+            resolve: "gatsby-plugin-sitemap",
+            exclude: ["/404*", "/*/404*"],
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
