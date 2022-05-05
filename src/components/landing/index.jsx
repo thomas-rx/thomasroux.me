@@ -12,12 +12,21 @@ import MGImage2 from '../../images/projects/medicgestion2.png';
 import MGImage3 from '../../images/projects/medicgestion3.png';
 import PortfolioImage from '../../images/projects/portfolio.png';
 import WordlyImage from '../../images/projects/wordly.png';
+import LogoBlackImage from '../../images/ressources/logo-black.png';
+import LogoWhiteImage from '../../images/ressources/logo-white.png';
 import { SectionContact } from './SectionContact';
 import { SectionProject } from './SectionProject';
 import { SectionTitle } from './SectionTitle';
 
 export default function PageContent({ data }) {
   const { trackEvent } = useMatomo();
+  const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+  let LogoImage = LogoWhiteImage;
+  if (darkThemeMq.matches) {
+    LogoImage = LogoWhiteImage;
+  } else {
+    LogoImage = LogoBlackImage;
+  }
 
   return (
     <div className='dark:bg-gray-800 dark:text-white font-ubuntu'>
@@ -55,7 +64,20 @@ export default function PageContent({ data }) {
               <SectionTitle
                 title='Thomas R.'
                 btnText='Découvrir'
+                description='• Développeur web freelance •'
                 fullpageApi={fullpageApi}
+              />
+
+              <SectionProject
+                name='À propos'
+                pictures={[
+                  [
+                    LogoImage,
+                    'Hopital Perpignan',
+                    'Hopital Perpignan',
+                    'w-[40%] md:w-[40%]',
+                  ],
+                ]}
               />
 
               <SectionProject
@@ -197,7 +219,7 @@ export default function PageContent({ data }) {
 
               <SectionTitle
                 title='Expériences'
-                btnText='Découvrir mes expériences'
+                btnText='Découvrir'
                 description=''
                 fullpageApi={fullpageApi}
               />
