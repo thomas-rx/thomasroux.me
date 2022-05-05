@@ -33,7 +33,7 @@ export function SectionProject(props) {
                       <span>
                         Freelance dans le domaine du développement web, je
                         souhaite mettre à profit mes compétences dans des
-                        projets inutiles et innovants.
+                        projets utiles et innovants.
                       </span>
                       <br />
                       <br />
