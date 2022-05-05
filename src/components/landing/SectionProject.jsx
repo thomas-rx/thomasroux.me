@@ -20,12 +20,35 @@ export function SectionProject(props) {
                   </h3>
                 </div>
                 <div className='text-sm text-justify md:text-base'>
-                  {props.description.map((value) => (
-                    <div>
-                      <p>{value}</p>
+                  {props.description !== undefined &&
+                    props.description.map((value) => (
+                      <div>
+                        <p>{value}</p>
+                        <br />
+                      </div>
+                    ))}
+
+                  {props.description === undefined && (
+                    <p className='leading-relaxed'>
+                      <span>
+                        Freelance dans le domaine du développement web, je
+                        souhaite mettre à profit mes compétences dans des
+                        projets inutiles et innovants.
+                      </span>
                       <br />
-                    </div>
-                  ))}
+                      <br />
+                      <span>N'hésitez pas à me</span>
+                      <a href='#contact' className='mx-1.5'>
+                        <strong className='p-1 rounded bg-gradient-to-br from-lime-400 to-cyan-400 dark:text-gray-800 font-black'>
+                          contacter
+                        </strong>
+                      </a>
+                      <span>
+                        si vous avez besoin d'aide ou si vous souhaitez me faire
+                        part de votre projet.
+                      </span>
+                    </p>
+                  )}
                 </div>
 
                 {props.technologies !== undefined && (
@@ -57,7 +80,7 @@ export function SectionProject(props) {
                   src={props.pictures[0][0]}
                   alt={props.pictures[0][1]}
                   title={props.pictures[0][2]}
-                  className='m-auto rounded-lg md:w-4/5'
+                  className={`m-auto rounded-lg md:w-4/5 ${props.pictures[0][3]}`}
                 />
               </div>
             )}
