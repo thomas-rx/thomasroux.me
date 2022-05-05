@@ -6,11 +6,7 @@ import React from 'react';
 import { GradienText } from '../common/Text/GradientText';
 
 export function SectionTitle(props) {
-  const { trackPageView, trackEvent } = useMatomo();
-
-  React.useEffect(() => {
-    trackPageView();
-  }, []);
+  const { trackEvent } = useMatomo();
   return (
     <div className='h-screen section'>
       <div className='grid content-center'>

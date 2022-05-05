@@ -1,6 +1,6 @@
 import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react';
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { SeoContent } from '../components/common/Seo/SeoContent';
 import PageContent from '../components/landing';
@@ -45,6 +45,11 @@ export default function Page({ data }) {
       seconds: 10,
     },
   });
+
+  useEffect(() => {
+    instance.trackPageView();
+  }
+  , []);
 
   return (
     <MatomoProvider value={instance}>

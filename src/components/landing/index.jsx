@@ -17,11 +17,7 @@ import { SectionProject } from './SectionProject';
 import { SectionTitle } from './SectionTitle';
 
 export default function PageContent({ data }) {
-  const { trackPageView, trackEvent } = useMatomo();
-
-  React.useEffect(() => {
-    trackPageView();
-  }, []);
+  const { trackEvent } = useMatomo();
 
   return (
     <div className='dark:bg-gray-800 dark:text-white font-ubuntu'>
@@ -46,11 +42,12 @@ export default function PageContent({ data }) {
           'contact',
         ]}
         afterLoad={(origin, destination, direction) => {
-          trackEvent({
-            category: 'Scroll',
-            action: origin.anchor + ' -> ' + destination.anchor,
-            name: direction,
-          });
+          if (destination.anchor !== origin.anchor) {
+            trackEvent({
+              category: 'Scroll ' + direction,
+              action: origin.anchor + ' -> ' + destination.anchor,
+            });
+          }
         }}
         render={({ _state, fullpageApi }) => {
           return (
