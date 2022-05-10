@@ -1,6 +1,6 @@
 {
     "name": "portfolio-react",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "private": true,
     "dependencies": {
         "@datapunt/matomo-tracker-react": "^0.5.1",
