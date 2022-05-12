@@ -42,7 +42,7 @@ export default function PageContent({ data }) {
         scrollBar={false}
         responsiveWidth={320}
         credits={false}
-        verticalCentered={true}
+        //verticalCentered={true}
         anchors={[
           'hello',
           'about',
