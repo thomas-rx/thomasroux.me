@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
 
 @layer components {
   #fp-nav ul li a span,
@@ -22,4 +20,9 @@
 .splide__arrow {
   margin-left: 5% !important;
   margin-right: 5% !important;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../styles/fonts/ubuntu/Ubuntu-Regular.ttf') format('truetype');
 }
