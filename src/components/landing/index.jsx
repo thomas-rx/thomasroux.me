@@ -21,7 +21,7 @@ import { SectionTitle } from './SectionTitle';
 export default function PageContent({ data }) {
   const { trackEvent } = useMatomo();
 
-  let logoImage = LogoWhiteImage;
+  let logoImage = LogoBlackImage;
 
   useEffect(() => {
     const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
@@ -41,8 +41,11 @@ export default function PageContent({ data }) {
         animateAnchor={true}
         scrollBar={false}
         responsiveWidth={320}
+        credits={false}
+        //verticalCentered={true}
         anchors={[
-          'home',
+          'hello',
+          'about',
           'p-wordly',
           'p-medicgestion',
           'p-diskarr',
@@ -64,24 +67,17 @@ export default function PageContent({ data }) {
         }}
         render={({ _state, fullpageApi }) => {
           return (
-            <div id='fullpage-wrapper'>
+            <ReactFullpage.Wrapper>
               <SectionTitle
                 title='Thomas R.'
                 btnText='Découvrir'
-                description='• Développeur web freelance •'
+                description='• Étudiant & Freelance •'
                 fullpageApi={fullpageApi}
               />
 
               <SectionProject
                 name='À propos'
-                pictures={[
-                  [
-                    logoImage,
-                    'Hopital Perpignan',
-                    'Hopital Perpignan',
-                    'w-[40%] md:w-[40%]',
-                  ],
-                ]}
+                pictures={[[logoImage, 'Logo', 'Logo', 'w-[40%] md:w-[40%]']]}
               />
 
               <SectionProject
@@ -256,7 +252,7 @@ export default function PageContent({ data }) {
                 mail={data.site.siteMetadata.email}
                 maltLink={data.site.siteMetadata.maltUrl}
               />
-            </div>
+            </ReactFullpage.Wrapper>
           );
         }}
       />

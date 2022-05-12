@@ -52,10 +52,8 @@ export default function Page({ data }) {
 
   return (
     <MatomoProvider value={instance}>
-      <React.Fragment>
-        <SeoContent data={data} />
-        <PageContent data={data} />
-      </React.Fragment>
+      <SeoContent data={data} />
+      <PageContent data={data} />
     </MatomoProvider>
   );
 }
