@@ -26,6 +26,7 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-postcss`,
         {
             resolve: "gatsby-plugin-sitemap",
             exclude: ["/404*", "/*/404*"],
@@ -42,5 +43,14 @@ module.exports = {
                 icon: config.logo,
             },
         },
+        { 
+            resolve: `gatsby-plugin-purgecss`,
+            options: {
+              printRejected: true,
+              develop: false,
+              tailwind: true,
+              ignore: ['node_modules/@splidejs/'],
+            }
+          },
     ],
 }
