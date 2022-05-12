@@ -49,7 +49,7 @@ module.exports = {
               printRejected: true,
               develop: false,
               tailwind: true,
-              ignore: ['node_modules/@splidejs/'],
+              ignore: ['node_modules/@splidejs/', 'node_modules/devicon/'],
             }
           },
     ],
