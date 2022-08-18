@@ -6,7 +6,6 @@ import HospitalImage from '../../images/pro/hopital.jpeg';
 import PyrescomImage from '../../images/pro/iot.jpeg';
 import CovidFranceImage from '../../images/projects/covidfrance1.png';
 import DiskarrImage from '../../images/projects/diskarr.png';
-import InfluxImage from '../../images/projects/influxdb.png';
 import MGImage1 from '../../images/projects/medicgestion1.png';
 import MGImage2 from '../../images/projects/medicgestion2.png';
 import MGImage3 from '../../images/projects/medicgestion3.png';
@@ -42,19 +41,17 @@ export default function PageContent({ data }) {
         scrollBar={false}
         responsiveWidth={320}
         credits={false}
-        //verticalCentered={true}
         anchors={[
           'hello',
           'about',
+          'p-portfolio',
           'p-wordly',
           'p-medicgestion',
           'p-diskarr',
           'p-covidfrance',
-          'p-goSync',
-          'p-portfolio',
           'w-professionnel',
-          'w-hopital-perpignan',
           'w-pyrescom',
+          'w-hopital-perpignan',
           'contact',
         ]}
         afterLoad={(origin, destination, direction) => {
@@ -71,17 +68,35 @@ export default function PageContent({ data }) {
               <SectionTitle
                 title='Thomas R.'
                 btnText='Découvrir'
-                description='• Étudiant & Freelance •'
+                description="Étudiant en Informatique 💻"
                 fullpageApi={fullpageApi}
               />
 
               <SectionProject
-                name='À propos'
+                name='À propos de moi'
                 pictures={[[logoImage, 'Logo', 'Logo', 'w-[40%] md:w-[40%]']]}
               />
 
               <SectionProject
+                name='Portfolio personnel'
+                year='2022'
+                description={[
+                  `Ce site est un portfolio personnel. Il permet de découvrir
+                  mes compétences et mes projets.`,
+                ]}
+                technologies={[
+                  'devicon-html5-plain-wordmark',
+                  'devicon-tailwindcss-plain',
+                  'devicon-react-original-wordmark',
+                  'devicon-gatsby-plain text-[30px]',
+                ]}
+                pictures={[[PortfolioImage, 'Illustration', 'Illustration']]}
+                githubLink={data.site.siteMetadata.githubUrl + '/www.xrths.fr'}
+              />
+
+              <SectionProject
                 name='Wordly'
+                year='2022'
                 description={[
                   `Jeu similaire au célèbre Motus, un mot est sélectionné aléatoirement chaque
                   jour et le joueur doit le trouver le plus vite possible en
@@ -107,6 +122,7 @@ export default function PageContent({ data }) {
 
               <SectionProject
                 name='MedicGestion'
+                year='2021'
                 description={[
                   `Application web permettant à une infrastructure médicale de gérer des patients 
                   tout en passant par la prise de rendez-vous via une interface ergonomique.`,
@@ -139,6 +155,7 @@ export default function PageContent({ data }) {
 
               <SectionProject
                 name='Diskarr'
+                year='2021'
                 description={[
                   `Diskarr est un projet open-source en cours de développement.`,
                   `Ceci est le site vitrine pour expliquer l'objectif du projet
@@ -161,6 +178,7 @@ export default function PageContent({ data }) {
 
               <SectionProject
                 name='CovidFrance'
+                year='2020'
                 description={[
                   `CovidFrance est un projet open-source dont je suis l'auteur.
                    Il s'agit d'un bot Twitter qui diffusait chaque jour les
@@ -182,68 +200,31 @@ export default function PageContent({ data }) {
                 ]}
               />
 
-              <SectionProject
-                name='Synchronisation InfluxDB'
-                description={[
-                  `Il s'agit d'un projet de synchronisation de données sur une
-                  base de données InfluxDB.`,
-                  `Il permet de récupérer des données brutes issues de
-                  différents capteurs (IoT), de les traiter et de les stocker dans
-                  la base.`,
-                ]}
-                technologies={['devicon-go-original-wordmark text-[50px]']}
-                pictures={[
-                  [
-                    InfluxImage,
-                    'Interface InfluxDB',
-                    "Image de l'interface InfluxDB",
-                  ],
-                ]}
-              />
-
-              <SectionProject
-                name='Portfolio personnel'
-                description={[
-                  `Ce site est un portfolio personnel. Il permet de découvrir
-                  mes compétences et mes projets.`,
-                ]}
-                technologies={[
-                  'devicon-html5-plain-wordmark',
-                  'devicon-tailwindcss-plain',
-                  'devicon-react-original-wordmark',
-                  'devicon-gatsby-plain text-[30px]',
-                ]}
-                pictures={[[PortfolioImage, 'Illustration', 'Illustration']]}
-                githubLink={data.site.siteMetadata.githubUrl + '/www.xrths.fr'}
-              />
-
               <SectionTitle
                 title='Expériences'
                 btnText='Découvrir'
-                description=''
+
                 fullpageApi={fullpageApi}
               />
 
               <SectionProject
-                name='Centre Hospitalier de Perpignan'
-                description={[
-                  `En charge de collaborer avec l'équipe responsable de l'infrastructure système et réseau du Centre Hospitalier de Perpignan.`,
-                  `Durant cette expérience, j'ai pu découvrir l'organisation du système d'information dans une infrastructure aussi critique.`,
-                  `J'ai découvert comment s'organisait le service informatique d'un établissement comptant plus de 10 000 appareils sur son réseau.`,
-                ]}
-                linkedinLink={data.site.siteMetadata.linkedinUrl}
-                pictures={[[HospitalImage, 'Illustration', 'Illustration']]}
-              />
-
-              <SectionProject
                 name='Pyrescom'
+                year='2022'
                 description={[
-                  `Pyrescom est une société française fournissant des solutions connectées (IoT).`,
-                  `J'ai eu l'occasion d'intégrer la société pour un stage de fin d'études.`,
-                  `Au sein du bureau d'études, j'ai assisté les équipes dans le développement de leurs projets.`,
+                  `Stage de fin d'études réalisé dans le cadre de mon DUT Informatique.`,
                 ]}
                 linkedinLink={data.site.siteMetadata.linkedinUrl}
                 pictures={[[PyrescomImage, 'Illustration', 'Illustration']]}
+              />
+
+              <SectionProject
+                name='Centre Hospitalier de Perpignan'
+                year='2021'
+                description={[
+                  `Maintenance et mise en place de l'infrastructure informatique de l'hôpital de Perpignan.`,
+                ]}
+                linkedinLink={data.site.siteMetadata.linkedinUrl}
+                pictures={[[HospitalImage, 'Illustration', 'Illustration']]}
               />
 
               <SectionContact

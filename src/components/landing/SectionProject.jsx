@@ -12,12 +12,15 @@ export function SectionProject(props) {
       <div className='px-12 lg:px-20 md:flex'>
         <div className='w-full'>
           <div className='md:flex'>
-            <div className='grid w-full md:content-center md:w-2/4 md:mr-5 md:p-10'>
+            <div className='w-full grid md:content-center md:w-2/4 md:mr-5 md:p-10'>
               <div className='md:mr-0'>
                 <div>
-                  <h3 className='pb-3 text-3xl font-black md:pb-10'>
+                  <h3 className='text-3xl font-black'>
                     <GradienText text={props.name} />
                   </h3>
+                  <h5 className='pb-3 text-xl font-thin text-emerald-800 dark:text-white md:pb-10'>
+                    {props.year}
+                  </h5>
                 </div>
                 <div className='text-sm text-justify md:text-base'>
                   {props.description !== undefined &&
@@ -28,27 +31,26 @@ export function SectionProject(props) {
                       </div>
                     ))}
 
-                  {props.description === undefined && (
-                    <p className='leading-relaxed'>
-                      <span>
-                        Freelance dans le domaine du développement web, je
-                        souhaite mettre à profit mes compétences dans des
-                        projets utiles et innovants.
-                      </span>
-                      <br />
-                      <br />
-                      <span>N'hésitez pas à me</span>
-                      <a href='#contact' className='mx-1.5'>
-                        <strong className='p-1 rounded bg-gradient-to-br from-lime-400 to-cyan-400 dark:text-gray-800 font-black'>
-                          contacter
-                        </strong>
-                      </a>
-                      <span>
-                        si vous avez besoin d'aide ou si vous souhaitez me faire
-                        part de votre projet.
-                      </span>
-                    </p>
-                  )}
+                  { // Si props.description est undefined, on affiche ce texte
+                    props.description === undefined && (
+                      <p className='leading-relaxed'>
+                        <span>
+                          Étudiant en troisième année de licence informatique à l'Université d'Aix-Marseille. J'étudie le développement et la gestion de systèmes d'informations.
+                        </span>
+                        <br />
+                        <br />
+                        <span>N'hésitez pas à me</span>
+                        <a href='#contact' className='mx-1.5'>
+                          <strong className='p-1 rounded font-extralight bg-gradient-to-br from-lime-400 to-cyan-400 dark:text-gray-800'>
+                            contacter
+                          </strong>
+                        </a>
+                        <span>
+                          si vous avez besoin d'aide ou si vous souhaitez me faire
+                          part de votre projet.
+                        </span>
+                      </p>
+                    )}
                 </div>
 
                 {props.technologies !== undefined && (

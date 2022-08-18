@@ -22,8 +22,8 @@ module.exports = {
   ],
   username: `@xrths`,
   email: `contact@xrths.fr`,
-  description: `Développeur web indépendant sur Perpignan.
-    Réalisation de projets, création de sites internet, optimisation de notoriété (SEO).`,
+  description: `Étudiant en troisième année de Licence Informatique.
+    Réalisation de projets, création de sites internet et optimisation de notoriété (SEO).`,
 
   socialLinks: {
     linkedin: `https://www.linkedin.com/in/xrths`,

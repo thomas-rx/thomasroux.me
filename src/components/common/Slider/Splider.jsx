@@ -4,7 +4,7 @@ import React from 'react';
 
 export function Slider(props) {
   return (
-    <div className='grid w-full'>
+    <div className='w-full grid'>
       <Splide
         options={{ type: 'loop', pagination: false, autoplay: true }}
         className='md:mx-[15%]'>

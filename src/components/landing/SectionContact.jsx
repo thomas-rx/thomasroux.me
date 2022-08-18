@@ -6,10 +6,10 @@ import { SocialNetworkBtn } from '../common/Button/SocialNetworkBtn';
 
 export function SectionContact(props) {
   return (
-    <div className='grid content-center h-screen section'>
+    <div className='content-center h-screen grid section'>
       <div>
         <span className='justify-center text-center'>
-          <h1 className='text-2xl font-black text-transparent md:text-5xl bg-clip-text bg-gradient-to-br from-lime-400 to-cyan-500'>
+          <h1 className='text-2xl font-black text-transparent md:text-5xl bg-clip-text bg-gradient-to-br  from-green-500 via-green-600 to-blue-500'>
             <span>Contactez-moi</span>
           </h1>
         </span>
