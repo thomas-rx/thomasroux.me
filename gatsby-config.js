@@ -43,14 +43,5 @@ module.exports = {
                 icon: config.logo,
             },
         },
-        { 
-            resolve: `gatsby-plugin-purgecss`,
-            options: {
-              printRejected: true,
-              develop: false,
-              tailwind: true,
-              ignore: ['node_modules/@splidejs/', 'node_modules/devicon/'],
-            }
-          },
     ],
 }
