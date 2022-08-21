@@ -22,3 +22,10 @@
   margin-right: 5% !important;
 }
 
+@font-face {
+  font-family: 'Ubuntu-Regular';
+  src: url('../styles/fonts/ubuntu/Ubuntu-Regular.ttf') format('ttf');
+
+  font-family: 'Ubuntu-Bold';
+  src: url('../styles/fonts/ubuntu/Ubuntu-Bold.ttf') format('ttf');
+}

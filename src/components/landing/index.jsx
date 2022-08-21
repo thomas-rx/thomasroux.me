@@ -32,7 +32,7 @@ export default function PageContent({ data }) {
   }, []);
 
   return (
-    <div className='dark:bg-gray-800 dark:text-white font-ubuntu'>
+    <div className='dark:bg-gray-800 dark:text-white'>
       <ReactFullpage
         navigation={true}
         navigationPosition='right'
