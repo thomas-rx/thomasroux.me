@@ -1,6 +1,15 @@
 [[plugins]]
-package = "@netlify/plugin-sitemap"
+name = "netlify-plugin-sitemap"
+package = "netlify-plugin-sitemap"
+inputs = [
+  "buildDir = public"
+]
 
-  [plugins.inputs]
-  buildDir = "public"
-  filePath = "sitemap/sitemap-0.xml"
+
+[[plugins]]
+name = "@netlify/plugin-gatsby"
+package = "@netlify/plugin-gatsby"
+inputs = [
+  "buildCommand = gatsby build",
+  "gatsbyDirectory = ."
+]

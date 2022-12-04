@@ -48,7 +48,7 @@ export default function Page({ data }) {
 
   useEffect(() => {
     instance.trackPageView();
-  }, []);
+  }, [instance]);
 
   return (
     <MatomoProvider value={instance}>

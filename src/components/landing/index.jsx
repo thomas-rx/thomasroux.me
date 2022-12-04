@@ -27,6 +27,7 @@ export default function PageContent({ data }) {
         scrollBar={false}
         responsiveWidth={320}
         credits={false}
+        licenseKey='OPEN-SOURCE-GPLV3-LICENSE'
         anchors={[
           'hello',
           'about',
@@ -188,7 +189,7 @@ export default function PageContent({ data }) {
                 name='Correcteur orthographique'
                 year='2022'
                 description={[
-                  `Programme permettant de proposer une version corrigé d'un mot.`,
+                  `Programme permettant de proposer une version corrigée d'un mot. `,
                   `Le programme utilise un dictionnaire de mots français et un algorithme de correction.`,
                 ]}
                 technologies={['devicon-java-plain-wordmark']}
