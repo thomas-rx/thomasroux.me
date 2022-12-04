@@ -8,5 +8,5 @@ package = "netlify-plugin-sitemap"
 package = "@netlify/plugin-gatsby"
 
   [plugins.inputs]
-    buildCommand = "gatsby build",
+    buildCommand = "gatsby build"
     gatsbyDirectory = "."
