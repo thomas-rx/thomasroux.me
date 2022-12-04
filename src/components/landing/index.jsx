@@ -20,7 +20,6 @@ export default function PageContent({ data }) {
   return (
     <div className='dark:bg-gray-800 dark:text-white'>
       <ReactFullpage
-        licenseKey='OPEN-SOURCE-GPLV3-LICENSE'
         navigation={true}
         navigationPosition='right'
         keyboardScrolling={true}
