@@ -23,7 +23,8 @@
     "scripts": {
         "dev": "gatsby develop -H 0.0.0.0 -o",
         "build": "gatsby build",
-        "serve": "gatsby clean && gatsby build && gatsby serve"
+        "serve": "gatsby clean && gatsby build && gatsby serve",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md}\" --ignore-path .gitignore"
     },
     "browserslist": {
         "production": [

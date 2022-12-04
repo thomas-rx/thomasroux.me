@@ -27,10 +27,10 @@
 
 ### Built With
 
--   [fullPage.js](https://github.com/alvarotrigo/fullpage.js)
--   [TailwindCSS](https://tailwindcss.com/)
--   [ReactJS](https://fr.reactjs.org/)
--   [Gatsby](https://www.gatsbyjs.com/)
+- [fullPage.js](https://github.com/alvarotrigo/fullpage.js)
+- [TailwindCSS](https://tailwindcss.com/)
+- [ReactJS](https://fr.reactjs.org/)
+- [Gatsby](https://www.gatsbyjs.com/)
 
 ## Getting Started
 

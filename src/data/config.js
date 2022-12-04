@@ -4,26 +4,10 @@ module.exports = {
   defaultTitle: `Thomas ROUX - Portfolio`,
   shortName: `Thomas R.`,
   author: `Thomas ROUX`,
-  keywords: [
-    'Thomas',
-    'ROUX',
-    'Perpignan',
-    'Développeur',
-    'Web',
-    'Site',
-    'Internet',
-    'Agence',
-    'Création',
-    'Développement',
-    'Malt',
-    'Toulouse',
-    'Paris',
-    'Île-De-France',
-  ],
+  keywords: ['Thomas', 'ROUX', 'Génie logiciel', 'xrths', 'portfolio'],
   username: `@xrths`,
   email: `contact@xrths.fr`,
-  description: `Étudiant en troisième année de Licence Informatique.
-    Réalisation de projets, création de sites internet et optimisation de notoriété (SEO).`,
+  description: `Étudiant en troisième année de Licence Informatique à l'Université Aix-Marseille. Je suis à la recherche d'un stage de fin d'études pour la période de Avril à Juillet 2023.`,
 
   socialLinks: {
     linkedin: `https://www.linkedin.com/in/xrths`,

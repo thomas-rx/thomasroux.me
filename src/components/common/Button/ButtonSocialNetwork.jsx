@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-export function SocialNetworkBtn(props) {
+export function ButtonSocialNetwork(props) {
   return (
     <a
       href={props.href}
