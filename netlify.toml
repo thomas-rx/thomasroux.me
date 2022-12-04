@@ -2,7 +2,7 @@
 package = "@netlify/plugin-sitemap"
 
   [plugins.inputs]
-    dir = "public"
+    buildDir = "public"
 
 [[plugins]]
 package = "@netlify/plugin-gatsby"
