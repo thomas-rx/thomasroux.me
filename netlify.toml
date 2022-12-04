@@ -1,5 +1,4 @@
 [[plugins]]
-name = "netlify-plugin-sitemap"
 package = "netlify-plugin-sitemap"
 inputs = [
   "buildDir = public"
@@ -7,7 +6,6 @@ inputs = [
 
 
 [[plugins]]
-name = "@netlify/plugin-gatsby"
 package = "@netlify/plugin-gatsby"
 inputs = [
   "buildCommand = gatsby build",
