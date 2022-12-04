@@ -27,6 +27,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-netlify`,
     {
       resolve: 'gatsby-plugin-sitemap',
       exclude: ['/404*', '/*/404*'],
