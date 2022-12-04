@@ -2,9 +2,9 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 
-import { SocialNetworkBtn } from '../common/Button/SocialNetworkBtn';
+import { ButtonSocialNetwork } from '../common/Button/ButtonSocialNetwork';
 
-export function SectionContact(props) {
+export function Contact(props) {
   return (
     <div className='content-center h-screen grid section'>
       <div>
@@ -17,28 +17,28 @@ export function SectionContact(props) {
         <div className='grid content-center w-2/3 m-auto place-content-center mt-[5%]'>
           <div className='md:flex'>
             <div className='mx-5 item'>
-              <SocialNetworkBtn
+              <ButtonSocialNetwork
                 name='LinkedIn'
                 href={props.linkedinLink}
                 icon={faLinkedin}
               />
             </div>
             <div className='mx-5 item'>
-              <SocialNetworkBtn
+              <ButtonSocialNetwork
                 name='E-Mail'
                 href={`mailto:${props.mail}`}
                 icon={faEnvelope}
               />
             </div>
             <div className='mx-5 item'>
-              <SocialNetworkBtn
+              <ButtonSocialNetwork
                 name='GitHub'
                 href={props.githubLink}
                 icon={faGithub}
               />
             </div>
             <div className='mx-5 item'>
-              <SocialNetworkBtn
+              <ButtonSocialNetwork
                 name='Malt'
                 href={props.maltLink}
                 icon={faBriefcase}

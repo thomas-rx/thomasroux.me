@@ -39,7 +39,7 @@ export default function Page({ data }) {
   const instance = createInstance({
     siteId: data.site.siteMetadata.matomo.siteId,
     urlBase: data.site.siteMetadata.matomo.urlBase,
-    disabled: production ? false : true,
+    disabled: !production,
     heartBeat: {
       active: true,
       seconds: 10,
