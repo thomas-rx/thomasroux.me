@@ -1,10 +1,12 @@
 import React from "react";
 import { Personal } from "../../sections/personal";
+import PresentationImage from "/src/images/commons/presentation.png";
 
 export function GlobalPresentation() {
   return (
     <Personal
       title="Présentation"
+      image={PresentationImage}
       text={
         <p className="leading-relaxed">
           <span>
@@ -17,7 +19,7 @@ export function GlobalPresentation() {
               className="text-primaryLight dark:text-primaryDark">
               Aix-Marseille
             </a>
-            , je suis actuellement à la recherche d'un stage de fin d'étude en
+            , je suis actuellement à la recherche d'un stage de fin d'études en
             génie logiciel.
           </span>
           <br />

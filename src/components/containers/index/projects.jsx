@@ -7,7 +7,7 @@ import MedicGestion2 from "../../../images/projects/medicgestion/2.png";
 import MedicGestion3 from "../../../images/projects/medicgestion/3.png";
 import Wordly1 from "../../../images/projects/wordly/1.png";
 
-export function ProjectsPresentation({ data }) {
+export function ProjectsPresentation({ data, api }) {
   return (
     <React.Fragment>
       <Project
@@ -15,14 +15,16 @@ export function ProjectsPresentation({ data }) {
         date="2020"
         description={
           <p>
-            CovidFrance est un projet open-source dont je suis l'auteur.
+            CovidFrance est mon premier projet. Il s'agit d'un bot Twitter qui publiait des statistiques sur la COVID-19
+            en 2020 et 2021.
             <br />
-            Il s'agit d'un bot Twitter qui diffusait chaque jour les
-            statistiques de la COVID-19 en France.
+            Réalisé avec Python, il utilisait les données fournies par Santé Publique France.
+            <br /><br />
+            Ce projet m'a permis de découvrir le développement en Python et de me familiariser avec les API et
+            l'open-source.
             <br />
-            Ce projet existe aussi pour le suivi de la vaccination.
-            <br />
-            Le compte était suivi par plus de 30 000 personnes.
+            Relayé par <a className="text-primaryLight dark:text-primaryDark" href="https://twitter.com/Mediavenir"
+                          target="_blank" rel="noreferrer">Mediavenir</a>, il est suivi par plus de 30 000 personnes.
           </p>
         }
         technologies={[
@@ -40,9 +42,9 @@ export function ProjectsPresentation({ data }) {
         date="2021"
         description={
           <p>
-            Application web permettant à une infrastructure médicale de gérer
-            des patients tout en passant par la prise de rendez-vous via une
-            interface ergonomique.
+            Application web développée en PHP ainsi qu'avec le framework TailwindCSS.
+            <br />
+            Elle permet de gérer les rendez-vous des patients d'un cabinet médical.
           </p>
         }
         technologies={[
@@ -64,8 +66,9 @@ export function ProjectsPresentation({ data }) {
             chaque jour et le joueur doit le trouver le plus vite possible en
             faisant le moins d'essais possibles.
             <br />
-            Le joueur peut partager son résultat et voir les meilleurs scores
-            sur le site.
+            Réalisé avec JavaScript, il utilise un dictionnaire de mots Français.
+            <br /><br />
+            Ce projet m'a permis de découvrir le développement en JavaScript et de me familiariser avec Netlify.
           </p>
         }
         technologies={[
@@ -83,14 +86,21 @@ export function ProjectsPresentation({ data }) {
         date="2022"
         description={
           <p>
-            Programme permettant de proposer une version corrigée d'un mot.
+            Ce programme est capable de proposer une ou plusieurs corrections en fonction de la <a
+            className="text-primaryLight dark:text-primaryDark"
+            href="https://fr.wikipedia.org/wiki/Distance_de_Levenshtein" target="_blank" rel="noreferrer">distance de
+            Levenshtein</a>.
+            <br /><br />
+            Réalisé avec Java, il utilise un algorithme de correction de mots basé sur le nombre de <a
+            className="text-primaryLight dark:text-primaryDark" href="https://fr.wikipedia.org/wiki/Digramme"
+            target="_blank" rel="noreferrer">digrammes</a>.
             <br />
-            Le programme utilise un dictionnaire de mots français et un
-            algorithme de correction.
+            Il est possible de l'utiliser facilement et comporte peu de code.
           </p>
         }
         technologies={["devicon-java-plain-wordmark"]}
         ascii="1.cast"
+        github={data.site.siteMetadata.githubUrl}
       />
     </React.Fragment>
   );

@@ -12,21 +12,26 @@ export default function PageContent({ data }) {
   return (
     <div className="dark:bg-gray-800 dark:text-white">
       <ReactFullpage
+        // Navigation
         navigation={true}
         navigationPosition="right"
+
+        // Scrolling
+        css3={true}
         keyboardScrolling={true}
-        animateAnchor={true}
-        scrollBar={false}
-        responsiveWidth={320}
-        credits={false}
-        licenseKey="OPEN-SOURCE-GPLV3-LICENSE"
+        easingcss3="ease-in-out"
+
+        lazyLoading={true}
+        observer={true}
+        credits={{ enabled: false }}
+
         anchors={[
           "hello",
           "about",
           "covidfrance",
           "medicgestion",
           "wordly",
-          "correcteur",
+          "correcteur"
         ]}
         afterLoad={(origin, destination, direction) => {
           if (destination.anchor !== origin.anchor) {
@@ -40,7 +45,7 @@ export default function PageContent({ data }) {
           return (
             <ReactFullpage.Wrapper>
               <SectionPresentation
-                title={["Bonjour", "Hello", "Hola", "Ciao", "Hallo"]}
+                title={["Bonjour", "Hello", "Hola", "Ciao", "Hallo", "Olá"]}
                 subtitle="Bienvenue sur mon portfolio !"
                 button="Découvrir"
                 fullpage={fullpageApi}

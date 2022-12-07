@@ -92,11 +92,15 @@ export function Project(props) {
                     }}>
                     {props.images.map((image, index) => (
                       <SplideSlide key={index}>
-                        <Zoom>
+                        <Zoom
+                          overlayBgColorEnd="rgba(0, 0, 0, 0.8)"
+                          transitionTime={500}
+                          transitionFunction="ease-in-out">
                           <img
                             src={image}
                             alt={props.title}
-                            className={`rounded rounded-xl md:w-full m-auto`}
+                            title={props.title + " project"}
+                            className={`md:w-full m-auto rounded rounded-xl`}
                           />
                         </Zoom>
                       </SplideSlide>
@@ -104,7 +108,8 @@ export function Project(props) {
                   </Splide>
                 )}
 
-                {props.ascii !== undefined && <Asciinema src={props.ascii} />}
+                {props.ascii !== undefined &&
+                  <Asciinema data-autoplay src={props.ascii} autoplay={props.autoplay || false} />}
               </div>
             </div>
           </div>

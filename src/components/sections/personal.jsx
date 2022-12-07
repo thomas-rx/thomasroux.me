@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
 export function Personal(props) {
   if (props.title === null) {
@@ -28,11 +27,12 @@ export function Personal(props) {
 
             <div className="md:w-2/4 m-2">
               <div className="m-auto md:w-1/3 w-[50%] pt-10">
-                <StaticImage
-                  src="../../images/commons/presentation.png"
-                  alt="Personal"
+                <img
+                  src={props.image}
+                  alt={props.title}
+                  title={props.title}
                   placeholder="blurred"
-                  className={"rounded-lg shadow-lg"}
+                  className={"shadow rounded-lg border-2 border-primaryLight dark:border-primaryDark"}
                 />
               </div>
             </div>

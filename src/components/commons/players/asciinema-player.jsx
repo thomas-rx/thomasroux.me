@@ -8,7 +8,7 @@ export class Asciinema extends React.Component {
   componentDidMount() {
     window.AsciinemaPlayer.create("casts/" + this.props.src, this.ref, {
       loop: true,
-      autoplay: false,
+      autoplay: this.props.autoplay || false,
       preload: true,
       rows: 25,
       poster: "npt:0:1",
