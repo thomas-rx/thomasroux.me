@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    #fp-nav ul li a span,
+    .fp-slidesNav ul li a span {
+        @apply dark:bg-white !important;
+    }
+
+    #fp-nav ul li {
+        @apply invisible md:visible !important;
+    }
+
+    #fp-nav ul li:first-child {
+        @apply invisible !important;
+    }
+}
+
+@font-face {
+    src: url('/src/styles/fonts/ubuntu/Ubuntu-Regular.ttf') format('ttf');
+    src: url('/src/styles/fonts/ubuntu/Ubuntu-Bold.ttf') format('ttf');
+    src: url('/src/styles/fonts/source-sans-pro/SourceSansPro-Regular.ttf') format('ttf');
+}
