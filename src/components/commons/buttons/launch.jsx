@@ -1,6 +1,6 @@
 import { faRocket } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import Button from "./Button";
+import Button from "./button";
 
 export function Launch(props) {
   return (
