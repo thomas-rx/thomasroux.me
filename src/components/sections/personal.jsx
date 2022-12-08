@@ -16,7 +16,7 @@ export function Personal(props) {
           <div className="md:flex">
             <div
               className="grid content-center md:w-2/4 m-2 border-l-2 md:border-l-0 border-primaryLight dark:border-primaryDark pl-4">
-              <h3 className="text-3xl font-black text-primaryLight dark:text-primaryDark">
+              <h3 className="text-3xl font-black font-ubuntu text-primaryLight dark:text-primaryDark">
                 {props.title}
               </h3>
 

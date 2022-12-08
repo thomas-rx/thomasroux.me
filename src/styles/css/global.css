@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,7 +20,5 @@
 }
 
 @font-face {
-    src: url('/src/styles/fonts/ubuntu/Ubuntu-Regular.ttf') format('ttf');
     src: url('/src/styles/fonts/ubuntu/Ubuntu-Bold.ttf') format('ttf');
-    src: url('/src/styles/fonts/source-sans-pro/SourceSansPro-Regular.ttf') format('ttf');
 }

@@ -8,10 +8,10 @@ export function Introduction(props) {
   const { trackEvent } = useMatomo();
 
   return (
-    <div className="content-center h-screen font-sans grid section">
-      <span className="justify-center font-black text-center">
+    <div className="content-center h-screen grid section">
+      <span className="justify-center font-bold text-center">
         <h1
-          className="text-5xl md:text-7xl bg-gradient-to-r from-indigo-300 via-teal-600 to-cyan-900 bg-clip-text text-transparent font-extra">
+          className="text-5xl md:text-7xl bg-gradient-to-r from-indigo-300 via-teal-600 to-cyan-900 bg-clip-text text-transparent font-ubuntu">
           <ReactTypingEffect
             text={props.title}
             speed={100}

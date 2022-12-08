@@ -8,6 +8,7 @@ import { Head } from "../components/commons/seo/seo";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { MyIntroduction } from "../components/containers/index/myIntroduction";
 import { Projects } from "../components/containers/index/projects";
+import { Introduction } from "../components/sections/introduction";
 
 export const query = graphql`
   query {
@@ -53,7 +54,6 @@ export default function Page({ data }) {
   });
 
   const handleScroll = (origin, destination, direction) => {
-    console.log(`Scroll ${direction}: ${origin.anchor} -> ${destination.anchor}`);
     if (destination.anchor !== origin.anchor) {
       const eventCategory = `Scroll ${direction}`;
       const eventAction = `${origin.anchor} -> ${destination.anchor}`;
@@ -65,7 +65,7 @@ export default function Page({ data }) {
   const isWinter = currentMonth === 11 || currentMonth === 12 || currentMonth === 1;
 
   const seasonalEffect = () => {
-    if (isWinter) return <Snowfall snowflakeCount={60} />;
+    if (isWinter) return <Snowfall snowflakeCount={100} />;
   };
 
   useEffect(() => {
@@ -76,21 +76,23 @@ export default function Page({ data }) {
   return (
     <MatomoProvider value={instance}>
       <Head data={data} />
-      {seasonalEffect()}
       <ReactFullpage
         anchors={["hello", "about", "covidfrance", "medicgestion", "wordly", "correcteur"]}
         afterLoad={handleScroll}
         render={({ _state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
-              <introduction
-                title={["Bonjour", "Hello", "Hola", "Ciao", "Hallo", "Olá"]}
-                subtitle="Bienvenue sur mon portfolio !"
-                button="Découvrir"
-                fullpage={fullpageApi}
-              />
-              <MyIntroduction />
-              <Projects data={data} />
+              {seasonalEffect()}
+              <div className="dark:bg-gray-900 text-neutralLight dark:text-neutralDark">
+                <Introduction
+                  title={["Bonjour", "Hello", "Hola", "Ciao", "Hallo", "Olá"]}
+                  subtitle="Bienvenue sur mon portfolio !"
+                  button="Découvrir"
+                  fullpage={fullpageApi}
+                />
+                <MyIntroduction />
+                <Projects data={data} />
+              </div>
             </ReactFullpage.Wrapper>
           );
         }}
