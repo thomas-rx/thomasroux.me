@@ -7,7 +7,7 @@ import MedicGestion2 from "../../../images/projects/medicgestion/2.png";
 import MedicGestion3 from "../../../images/projects/medicgestion/3.png";
 import Wordly1 from "../../../images/projects/wordly/1.png";
 
-export function ProjectsPresentation({ data, api }) {
+export function ProjectsPresentation({ data }) {
   return (
     <React.Fragment>
       <Project

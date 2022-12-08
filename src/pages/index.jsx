@@ -1,11 +1,14 @@
-import { createInstance, MatomoProvider } from "@datapunt/matomo-tracker-react";
+import { createInstance, MatomoProvider, useMatomo } from "@datapunt/matomo-tracker-react";
 import { graphql } from "gatsby";
 import React, { useEffect } from "react";
 import Snowfall from "react-snowfall";
 import packageJson from "/package.json";
 
 import { Seo } from "../components/commons/seo/seo";
-import MainPage from "../components/containers/index";
+import ReactFullpage from "@fullpage/react-fullpage";
+import { SectionPresentation } from "../components/sections/section-presentation";
+import { GlobalPresentation } from "../components/containers/index/globalPresentation";
+import { ProjectsPresentation } from "../components/containers/index/projects";
 
 export const query = graphql`
   query {
@@ -34,10 +37,10 @@ export const query = graphql`
 `;
 
 const production = process.env.NODE_ENV === "production";
-production ? console.log("Environment: Production") : console.log("Environment: Development");
-console.log("Commit hash: " + process.env.COMMIT_REF);
-console.log("Version: " + packageJson.version);
-console.log("Build date: " + process.env.BUILD_DATE);
+console.log(`Environment: ${production ? "Production" : "Development"}`);
+console.log(`Commit hash: ${process.env.COMMIT_REF}`);
+console.log(`Version: ${packageJson.version}`);
+console.log(`Build date: ${process.env.BUILD_DATE}`);
 
 export default function Page({ data }) {
   const instance = createInstance({
@@ -50,36 +53,49 @@ export default function Page({ data }) {
     }
   });
 
-  // Seasonal effects
-  const season = new Date().getMonth();
-  const isWinter = season === 11 || season === 12 || season === 1;
-  const isSpring = season === 2 || season === 3 || season === 4;
-  const isSummer = season === 5 || season === 6 || season === 7;
-  const isAutumn = season === 8 || season === 9 || season === 10;
+  const handleScroll = (origin, destination, direction) => {
+    console.log(`Scroll ${direction}: ${origin.anchor} -> ${destination.anchor}`);
+    if (destination.anchor !== origin.anchor) {
+      const eventCategory = `Scroll ${direction}`;
+      const eventAction = `${origin.anchor} -> ${destination.anchor}`;
+      trackEvent({ category: eventCategory, action: eventAction });
+    }
+  };
+
+  const currentMonth = new Date().getMonth();
+  const isWinter = currentMonth === 11 || currentMonth === 12 || currentMonth === 1;
 
   const seasonalEffect = () => {
-    let theme;
-    if (isWinter) {
-      theme = <Snowfall snowflakeCount={60} />;
-    } else if (isSpring) {
-      return null;
-    } else if (isSummer) {
-      return null;
-    } else if (isAutumn) {
-      return null;
-    }
-    return theme;
+    if (isWinter) return <Snowfall snowflakeCount={60} />;
   };
 
   useEffect(() => {
     instance.trackPageView();
   }, [instance]);
+  const { trackEvent } = useMatomo();
 
   return (
     <MatomoProvider value={instance}>
       <Seo data={data} />
       {seasonalEffect()}
-      <MainPage data={data} />
+      <ReactFullpage
+        anchors={["hello", "about", "covidfrance", "medicgestion", "wordly", "correcteur"]}
+        afterLoad={handleScroll}
+        render={({ _state, fullpageApi }) => {
+          return (
+            <ReactFullpage.Wrapper>
+              <SectionPresentation
+                title={["Bonjour", "Hello", "Hola", "Ciao", "Hallo", "Olá"]}
+                subtitle="Bienvenue sur mon portfolio !"
+                button="Découvrir"
+                fullpage={fullpageApi}
+              />
+              <GlobalPresentation />
+              <ProjectsPresentation data={data} />
+            </ReactFullpage.Wrapper>
+          );
+        }}
+      />
     </MatomoProvider>
   );
 }
