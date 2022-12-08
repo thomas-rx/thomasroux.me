@@ -4,11 +4,10 @@ import React, { useEffect } from "react";
 import Snowfall from "react-snowfall";
 import packageJson from "/package.json";
 
-import { Seo } from "../components/commons/seo/seo";
+import { Head } from "../components/commons/seo/seo";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { SectionPresentation } from "../components/sections/section-presentation";
-import { GlobalPresentation } from "../components/containers/index/globalPresentation";
-import { ProjectsPresentation } from "../components/containers/index/projects";
+import { MyIntroduction } from "../components/containers/index/myIntroduction";
+import { Projects } from "../components/containers/index/projects";
 
 export const query = graphql`
   query {
@@ -76,7 +75,7 @@ export default function Page({ data }) {
 
   return (
     <MatomoProvider value={instance}>
-      <Seo data={data} />
+      <Head data={data} />
       {seasonalEffect()}
       <ReactFullpage
         anchors={["hello", "about", "covidfrance", "medicgestion", "wordly", "correcteur"]}
@@ -84,14 +83,14 @@ export default function Page({ data }) {
         render={({ _state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
-              <SectionPresentation
+              <introduction
                 title={["Bonjour", "Hello", "Hola", "Ciao", "Hallo", "Olá"]}
                 subtitle="Bienvenue sur mon portfolio !"
                 button="Découvrir"
                 fullpage={fullpageApi}
               />
-              <GlobalPresentation />
-              <ProjectsPresentation data={data} />
+              <MyIntroduction />
+              <Projects data={data} />
             </ReactFullpage.Wrapper>
           );
         }}

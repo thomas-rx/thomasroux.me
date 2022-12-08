@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 
-export function SectionPresentation(props) {
+export function Introduction(props) {
   const { trackEvent } = useMatomo();
 
   return (

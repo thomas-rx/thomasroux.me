@@ -5,8 +5,8 @@ import { Github } from "../commons/buttons/github";
 import { Twitter } from "../commons/buttons/twitter";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import { Play } from "../commons/buttons/play";
-import { Asciinema } from "../commons/players/asciinema-player";
+import { Launch } from "../commons/buttons/launch";
+import { AsciinemaPlayer } from "../commons/players/asciinema-player";
 
 export function Project(props) {
   if (props.title === undefined) {
@@ -61,7 +61,7 @@ export function Project(props) {
 
                 {props.github !== undefined && <Github link={props.github} />}
 
-                {props.play !== undefined && <Play play={props.play} />}
+                {props.play !== undefined && <Launch play={props.play} />}
               </div>
             </div>
 
@@ -109,7 +109,8 @@ export function Project(props) {
                 )}
 
                 {props.ascii !== undefined &&
-                  <Asciinema data-autoplay src={props.ascii} autoplay={props.autoplay || false} />}
+                  <AsciinemaPlayer data-autoplay src={props.ascii}
+                                   autoplay={props.autoplay || false} />}
               </div>
             </div>
           </div>

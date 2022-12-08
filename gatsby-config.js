@@ -1,4 +1,5 @@
 const config = require('./portfolio');
+const siteUrl = "https://www.xrths.fr";
 
 module.exports = {
   siteMetadata: {
@@ -25,7 +26,6 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,

@@ -1,11 +1,10 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
 import OpenGraphImage from "../../../images/commons/opengraph.png";
 
-export function Seo({ data }) {
+export function Head({ data }) {
   return (
-    <Helmet htmlAttributes={{ lang: "fr" }}>
+    <>
       <meta charSet="utf-8" />
       <meta name="robots" content="index, follow" />
       <meta
@@ -48,6 +47,6 @@ export function Seo({ data }) {
         content={data.site.siteMetadata.description}
       />
       <meta property="twitter:image" content={OpenGraphImage} />
-    </Helmet>
+    </>
   );
 }

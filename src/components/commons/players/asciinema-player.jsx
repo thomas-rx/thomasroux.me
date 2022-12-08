@@ -1,14 +1,15 @@
 import React from "react";
 
-export class Asciinema extends React.Component {
+export class AsciinemaPlayer extends React.Component {
   bindRef = (ref) => {
     this.ref = ref;
   };
 
   componentDidMount() {
-    window.AsciinemaPlayer.create("casts/" + this.props.src, this.ref, {
+    const { src, autoplay } = this.props;
+    window.AsciinemaPlayer.create("casts/" + src, this.ref, {
       loop: true,
-      autoplay: this.props.autoplay || false,
+      autoplay: autoplay || false,
       preload: true,
       rows: 25,
       poster: "npt:0:1",

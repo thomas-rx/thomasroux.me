@@ -2,7 +2,7 @@ import React from "react";
 import { Personal } from "../../sections/personal";
 import PresentationImage from "/src/images/commons/presentation.png";
 
-export function GlobalPresentation() {
+export function MyIntroduction() {
   return (
     <Personal
       title="Présentation"

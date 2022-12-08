@@ -7,7 +7,7 @@ import MedicGestion2 from "../../../images/projects/medicgestion/2.png";
 import MedicGestion3 from "../../../images/projects/medicgestion/3.png";
 import Wordly1 from "../../../images/projects/wordly/1.png";
 
-export function ProjectsPresentation({ data }) {
+export function Projects({ data }) {
   return (
     <React.Fragment>
       <Project
@@ -15,16 +15,20 @@ export function ProjectsPresentation({ data }) {
         date="2020"
         description={
           <p>
-            CovidFrance est mon premier projet. Il s'agit d'un bot Twitter qui publiait des statistiques sur la COVID-19
+            CovidFrance est mon premier projet. Il s'agit d'un bot Twitter qui publiait des statistiques sur
+            la COVID-19
             en 2020 et 2021.
             <br />
             Réalisé avec Python, il utilisait les données fournies par Santé Publique France.
             <br /><br />
-            Ce projet m'a permis de découvrir le développement en Python et de me familiariser avec les API et
+            Ce projet m'a permis de découvrir le développement en Python et de me familiariser avec les API
+            et
             l'open-source.
             <br />
-            Relayé par <a className="text-primaryLight dark:text-primaryDark" href="https://twitter.com/Mediavenir"
-                          target="_blank" rel="noreferrer">Mediavenir</a>, il est suivi par plus de 30 000 personnes.
+            Relayé par <a className="text-primaryLight dark:text-primaryDark"
+                          href="https://twitter.com/Mediavenir"
+                          target="_blank" rel="noreferrer">Mediavenir</a>, il est suivi par plus de 30 000
+            personnes.
           </p>
         }
         technologies={[
@@ -68,7 +72,8 @@ export function ProjectsPresentation({ data }) {
             <br />
             Réalisé avec JavaScript, il utilise un dictionnaire de mots Français.
             <br /><br />
-            Ce projet m'a permis de découvrir le développement en JavaScript et de me familiariser avec Netlify.
+            Ce projet m'a permis de découvrir le développement en JavaScript et de me familiariser avec
+            Netlify.
           </p>
         }
         technologies={[
@@ -88,11 +93,13 @@ export function ProjectsPresentation({ data }) {
           <p>
             Ce programme est capable de proposer une ou plusieurs corrections en fonction de la <a
             className="text-primaryLight dark:text-primaryDark"
-            href="https://fr.wikipedia.org/wiki/Distance_de_Levenshtein" target="_blank" rel="noreferrer">distance de
+            href="https://fr.wikipedia.org/wiki/Distance_de_Levenshtein" target="_blank" rel="noreferrer">distance
+            de
             Levenshtein</a>.
             <br /><br />
             Réalisé avec Java, il utilise un algorithme de correction de mots basé sur le nombre de <a
-            className="text-primaryLight dark:text-primaryDark" href="https://fr.wikipedia.org/wiki/Digramme"
+            className="text-primaryLight dark:text-primaryDark"
+            href="https://fr.wikipedia.org/wiki/Digramme"
             target="_blank" rel="noreferrer">digrammes</a>.
             <br />
             Il est possible de l'utiliser facilement et comporte peu de code.
