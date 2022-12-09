@@ -7,6 +7,7 @@ import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { Launch } from "../commons/buttons/launch";
 import { AsciinemaPlayer } from "../commons/players/asciinema-player";
+import {GatsbyImage, getImage} from "gatsby-plugin-image";
 
 export function Project(props) {
   if (props.title === undefined) {
@@ -66,7 +67,7 @@ export function Project(props) {
             </div>
 
             <div className="md:w-2/4 m-2">
-              <div className="m-auto md:w-5/6 pt-[5%] rounded rounded-xl">
+              <div className="m-auto md:w-5/6 pt-5 md:pt-0">
                 {props.ascii === undefined && (
                   <Splide
                     options={{
@@ -92,11 +93,9 @@ export function Project(props) {
                     }}>
                     {props.images.map((image, index) => (
                       <SplideSlide key={index}>
-                        <Zoom
-                          transitionTime={500}
-                          transitionFunction="ease-in-out">
-                          <img
-                            src={image}
+                        <Zoom>
+                          <GatsbyImage
+                            image={getImage(image)}
                             alt={props.title}
                             title={props.title + " project"}
                             className={`md:w-full m-auto rounded rounded-xl`}

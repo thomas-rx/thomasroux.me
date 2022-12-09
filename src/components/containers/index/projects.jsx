@@ -1,13 +1,30 @@
 import React from "react";
 import { Project } from "../../sections/project";
-import CovidFranceImage1 from "../../../images/projects/covidfrance/1.png";
-import CovidFranceImage2 from "../../../images/projects/covidfrance/2.png";
-import MedicGestion1 from "../../../images/projects/medicgestion/1.png";
-import MedicGestion2 from "../../../images/projects/medicgestion/2.png";
-import MedicGestion3 from "../../../images/projects/medicgestion/3.png";
-import Wordly1 from "../../../images/projects/wordly/1.png";
+import {graphql, useStaticQuery} from "gatsby";
 
 export function Projects({ data }) {
+    const images = useStaticQuery(graphql`
+    query {
+  CovidFranceImage1: file(relativePath: { eq: "covidfrance/1.png" }) {
+    childImageSharp {
+      gatsbyImageData(
+        width: 600
+        placeholder: BLURRED
+        formats: [AUTO, WEBP, AVIF]
+      )
+    }
+  }
+  CovidFranceImage2: file(relativePath: { eq: "covidfrance/2.png" }) {
+    childImageSharp {
+      gatsbyImageData(
+        width: 600
+        placeholder: BLURRED
+        formats: [AUTO, WEBP, AVIF]
+      )
+    }
+  }
+}
+    `);
   return (
     <React.Fragment>
       <Project
@@ -36,10 +53,12 @@ export function Projects({ data }) {
           "devicon-twitter-original text-[30px]",
           "devicon-jupyter-plain-wordmark"
         ]}
-        images={[CovidFranceImage1, CovidFranceImage2]}
+        images={[images.CovidFranceImage1, images.CovidFranceImage2]}
         twitter="https://twitter.com/CovidFrance"
         github={data.site.siteMetadata.githubUrl + "/COVID19_FR"}
       />
+
+        {/*}
 
       <Project
         title="MedicGestion"
@@ -109,6 +128,7 @@ export function Projects({ data }) {
         ascii="1.cast"
         github={data.site.siteMetadata.githubUrl}
       />
+      */}
     </React.Fragment>
   );
 }

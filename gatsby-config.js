@@ -36,6 +36,13 @@ module.exports = {
       exclude: ['/404*', '/*/404*'],
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/projects`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: config.title,
