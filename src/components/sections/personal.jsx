@@ -26,7 +26,7 @@ export function Personal(props) {
                             </div>
                         </div>
 
-                        <div className="md:w-2/4 m-2">
+                        <div className="md:w-2/4 m-2 pt-[10%] md:pt-0">
                             <div className="m-auto md:w-2/3 w-3/5 flex place-content-center">
                                 <Illustration/>
                             </div>

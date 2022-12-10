@@ -17,6 +17,9 @@ module.exports = {
         neutralLight: colors.gray[900],
         neutralDark: colors.gray[100],
       },
+      screens: {
+        'md': '900px',
+      }
     },
   },
 };

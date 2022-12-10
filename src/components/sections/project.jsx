@@ -66,8 +66,8 @@ export function Project(props) {
                             </div>
                         </div>
 
-                        <div className="md:w-2/4 m-2">
-                            <div className="m-auto md:w-5/6 pt-5 md:pt-0">
+                        <div className="md:w-2/4 m-2 flex">
+                            <div className="m-auto md:w-5/6 pt-[10%] md:pt-0 m-auto">
                                 {props.ascii === undefined && (
                                     <Splide
                                         options={{
@@ -76,20 +76,7 @@ export function Project(props) {
                                             autoplay: true,
                                             easing: "ease-in-out",
                                             interval: 5000,
-                                            pauseOnHover: false,
-                                            pauseOnFocus: false,
-                                            resetProgress: false,
                                             arrows: false,
-                                            lazyLoad: "nearby",
-                                            speed: 1000,
-                                            gap: "1rem",
-                                            perPage: 1,
-                                            perMove: 1,
-                                            breakpoints: {
-                                                640: {perPage: 1, perMove: 1, gap: "1rem"},
-                                                768: {perPage: 1, perMove: 1, gap: "1rem"},
-                                                1024: {perPage: 1, perMove: 1, gap: "1rem"}
-                                            }
                                         }}>
                                         {props.images.map((image, index) => (
                                             <SplideSlide key={index}>
