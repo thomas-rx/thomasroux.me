@@ -21,8 +21,8 @@ module.exports = {
   },
 
   matomo: {
-    siteId: 10,
-    urlBase: 'https://analytics.xrths.cloud/',
-    trackerUrl: 'https://analytics.xrths.cloud/matomo.php',
+    siteId: 11,
+    urlBase: "https://analytics.xrths.cloud/",
+    trackerUrl: "https://analytics.xrths.cloud/matomo.php"
   },
 };
