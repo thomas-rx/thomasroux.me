@@ -17,6 +17,10 @@
     #fp-nav ul li:first-child {
         @apply invisible !important;
     }
+
+    [data-rmiz-modal-overlay="visible"] {
+        background-color: #1e293b !important;
+    }
 }
 
 @font-face {
