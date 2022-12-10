@@ -1,6 +1,6 @@
 import React from "react";
-import {Project} from "../../sections/project";
-import {graphql, useStaticQuery} from "gatsby";
+import { Project } from "../../sections/project";
+import { graphql, useStaticQuery } from "gatsby";
 
 export function Projects({data}) {
     const images = useStaticQuery(graphql`
@@ -117,9 +117,9 @@ export function Projects({data}) {
             />
 
             <Project
-                title="Wordly"
-                date="2021"
-                description={
+              title="Wordly"
+              date="2021"
+              description={
                     <p>
                         Jeu similaire au célèbre Motus, un mot est sélectionné aléatoirement
                         chaque jour et le joueur doit le trouver le plus vite possible en
@@ -131,14 +131,14 @@ export function Projects({data}) {
                         Netlify.
                     </p>
                 }
-                technologies={[
+              technologies={[
                     "devicon-html5-plain-wordmark",
                     "devicon-css3-plain-wordmark",
                     "devicon-javascript-plain"
                 ]}
-                images={[images.Wordly1]}
-                github={data.site.siteMetadata.githubUrl + "/Wordly"}
-                play={data.site.siteMetadata.wordlyUrl}
+              images={[images.Wordly1]}
+              github={data.site.siteMetadata.githubUrl + "/Wordly"}
+              launch={data.site.siteMetadata.wordlyUrl}
             />
 
             <Project

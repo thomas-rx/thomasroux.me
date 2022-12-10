@@ -1,13 +1,13 @@
 import React from "react";
-import {Splide, SplideSlide} from "@splidejs/react-splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import {Github} from "../commons/buttons/github";
-import {Twitter} from "../commons/buttons/twitter";
+import { Github } from "../commons/buttons/github";
+import { Twitter } from "../commons/buttons/twitter";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import {Launch} from "../commons/buttons/launch";
-import {AsciinemaPlayer} from "../commons/players/asciinema-player";
-import {GatsbyImage, getImage} from "gatsby-plugin-image";
+import { Launch } from "../commons/buttons/launch";
+import { AsciinemaPlayer } from "../commons/players/asciinema-player";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export function Project(props) {
     if (props.title === undefined) {
@@ -62,7 +62,7 @@ export function Project(props) {
 
                                 {props.github !== undefined && <Github link={props.github}/>}
 
-                                {props.play !== undefined && <Launch play={props.play}/>}
+                                {props.launch !== undefined && <Launch link={props.launch} />}
                             </div>
                         </div>
 
