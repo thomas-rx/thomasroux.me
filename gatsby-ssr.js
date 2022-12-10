@@ -1,14 +1,18 @@
-import React from 'react';
-import { withPrefix } from 'gatsby';
+import React from "react";
+import { withPrefix } from "gatsby";
 
-export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
+export const onRenderBody = ({ setHeadComponents, setPostBodyComponents, setHtmlAttributes }) => {
+  setHtmlAttributes({
+    lang: "fr"
+  });
+
   setHeadComponents([
     <link
-      href={withPrefix('resources/asciinema-player.css')}
-      key='asciinema-player.css'
-      rel='stylesheet'
-      type='text/css'
-    />,
+      href={withPrefix("resources/asciinema-player.css")}
+      key="asciinema-player.css"
+      rel="stylesheet"
+      type="text/css"
+    />
   ]);
 
   setPostBodyComponents([
