@@ -1,8 +1,9 @@
 {
-    "name": "portfolio-react",
-    "version": "1.1.0",
+    "name": "portfolio",
+    "version": "2.0.0",
     "private": true,
     "dependencies": {
+        "@babel/core": "^7.20.5",
         "@datapunt/matomo-tracker-react": "^0.5.1",
         "@fortawesome/free-brands-svg-icons": "^6.2.1",
         "@fortawesome/free-solid-svg-icons": "^6.2.1",
@@ -11,16 +12,18 @@
         "@splidejs/react-splide": "^0.7.12",
         "devicon": "^2.15.1",
         "gatsby": "^5.2.0",
+        "gatsby-cli": "^5.2.0",
         "gatsby-plugin-image": "^3.2.0",
         "gatsby-plugin-manifest": "^5.2.0",
-        "gatsby-plugin-postcss": "^6.2.0",
-        "gatsby-plugin-react-helmet": "^6.2.0",
+        "gatsby-plugin-react-svg": "^3.3.0",
         "gatsby-plugin-sharp": "^5.2.0",
         "gatsby-plugin-sitemap": "^6.2.0",
         "gatsby-source-filesystem": "^5.2.0",
         "gatsby-transformer-sharp": "^5.2.0",
         "react": "^18.2.0",
         "react-helmet": "^6.1.0",
+        "react-medium-image-zoom": "^5.1.2",
+        "react-snowfall": "^1.2.1",
         "react-typing-effect": "^2.0.5"
     },
     "scripts": {
@@ -42,12 +45,10 @@
         ]
     },
     "devDependencies": {
-        "@netlify/plugin-sitemap": "^0.8.1",
-        "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+        "asciinema-player": "^3.0.1",
         "autoprefixer": "^10.4.13",
-        "cssnano": "^5.1.14",
-        "eslint-plugin-simple-import-sort": "^8.0.0",
         "gatsby-plugin-netlify": "^5.1.0",
+        "gatsby-plugin-postcss": "^6.2.0",
         "postcss": "^8.4.19",
         "prettier": "2.8.0",
         "tailwindcss": "^3.2.4"

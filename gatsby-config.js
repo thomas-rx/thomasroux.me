@@ -1,4 +1,5 @@
-const config = require('./src/data/config');
+const config = require('./portfolio');
+const siteUrl = "https://www.xrths.fr";
 
 module.exports = {
   siteMetadata: {
@@ -25,7 +26,6 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
@@ -34,6 +34,21 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       exclude: ['/404*', '/*/404*'],
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,

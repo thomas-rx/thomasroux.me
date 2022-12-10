@@ -1,8 +1,8 @@
 [[plugins]]
 package = "@netlify/plugin-sitemap"
 
-  [plugins.inputs]
-    buildDir = "public"
+[plugins.inputs]
+buildDir = "public"
 
 [build.environment]
 NODE_VERSION = "18.12.1"
