@@ -1,4 +1,4 @@
-const config = require('./portfolio');
+const config = require("./portfolio");
 const siteUrl = "https://www.xrths.fr";
 
 module.exports = {
@@ -32,8 +32,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-plugin-sitemap',
-      exclude: ['/404*', '/*/404*'],
+      resolve: "gatsby-plugin-sitemap",
+      exclude: ["/404*", "/*/404*"],
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -46,9 +46,9 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/
-        }
-      }
+          include: /assets/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

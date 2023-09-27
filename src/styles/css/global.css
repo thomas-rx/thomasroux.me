@@ -5,24 +5,24 @@
 @tailwind utilities;
 
 @layer components {
-    #fp-nav ul li a span,
-    .fp-slidesNav ul li a span {
-        @apply dark:bg-white !important;
-    }
+  #fp-nav ul li a span,
+  .fp-slidesNav ul li a span {
+    @apply dark:bg-white !important;
+  }
 
-    #fp-nav ul li {
-        @apply invisible md:visible !important;
-    }
+  #fp-nav ul li {
+    @apply invisible md:visible !important;
+  }
 
-    #fp-nav ul li:first-child {
-        @apply invisible !important;
-    }
+  #fp-nav ul li:first-child {
+    @apply invisible !important;
+  }
 
-    [data-rmiz-modal-overlay="visible"] {
-        background-color: #1e293b !important;
-    }
+  [data-rmiz-modal-overlay="visible"] {
+    background-color: #1e293b !important;
+  }
 }
 
 @font-face {
-    src: url('/src/styles/fonts/ubuntu/Ubuntu-Bold.ttf') format('ttf');
+  src: url("/src/styles/fonts/ubuntu/Ubuntu-Bold.ttf") format("ttf");
 }

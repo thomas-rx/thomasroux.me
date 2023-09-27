@@ -1,13 +1,13 @@
-const colors = require('tailwindcss/colors');
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: [
     "./src/pages/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,jsx,ts,tsx}"
+    "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        'ubuntu': ['Ubuntu', 'sans-serif'],
+        ubuntu: ["Ubuntu", "sans-serif"],
       },
       colors: {
         primaryLight: colors.teal[700],
@@ -18,8 +18,8 @@ module.exports = {
         neutralDark: colors.gray[100],
       },
       screens: {
-        'md': '900px',
-      }
+        md: "900px",
+      },
     },
   },
 };

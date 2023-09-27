@@ -1,9 +1,13 @@
 import React from "react";
 import { withPrefix } from "gatsby";
 
-export const onRenderBody = ({ setHeadComponents, setPostBodyComponents, setHtmlAttributes }) => {
+export const onRenderBody = ({
+  setHeadComponents,
+  setPostBodyComponents,
+  setHtmlAttributes,
+}) => {
   setHtmlAttributes({
-    lang: "fr"
+    lang: "fr",
   });
 
   setHeadComponents([
@@ -12,14 +16,14 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents, setHtml
       key="asciinema-player.css"
       rel="stylesheet"
       type="text/css"
-    />
+    />,
   ]);
 
   setPostBodyComponents([
     <script
-      key='asciinema-player.min.js'
-      src={withPrefix('resources/asciinema-player.min.js')}
-      type='text/javascript'
+      key="asciinema-player.min.js"
+      src={withPrefix("resources/asciinema-player.min.js")}
+      type="text/javascript"
     />,
   ]);
 };

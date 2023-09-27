@@ -31,8 +31,7 @@ export function Project(props) {
   return (
     <div className="h-screen w-full section">
       <div className="m-[10%] md:flex">
-        <div
-          className="grid content-center md:w-2/4 m-2 border-l-2 md:border-l-0 border-primaryLight dark:border-primaryDark pl-4">
+        <div className="grid content-center md:w-2/4 m-2 border-l-2 md:border-l-0 border-primaryLight dark:border-primaryDark pl-4">
           <h3 className="text-3xl font-black font-ubuntu text-primaryLight dark:text-primaryDark">
             {props.title}
           </h3>
@@ -49,14 +48,13 @@ export function Project(props) {
             {props.technologies.map((technology, index) => (
               <em
                 key={index}
-                className={`${technology} colored my-5 mr-1`}></em>
+                className={`${technology} colored my-5 mr-1`}
+              ></em>
             ))}
           </div>
 
           <div className="flex md:text-sm text-xs">
-            {props.twitter !== undefined && (
-              <Twitter link={props.twitter} />
-            )}
+            {props.twitter !== undefined && <Twitter link={props.twitter} />}
 
             {props.github !== undefined && <Github link={props.github} />}
 
@@ -66,7 +64,6 @@ export function Project(props) {
 
         <div className="md:w-2/4 m-auto md:grid">
           <div className="m-auto m-[3%] pt-[10%] md:pt-0">
-
             {props.ascii === undefined && (
               <Splide
                 options={{
@@ -75,8 +72,9 @@ export function Project(props) {
                   autoplay: true,
                   easing: "ease-in-out",
                   interval: 5000,
-                  arrows: false
-                }}>
+                  arrows: false,
+                }}
+              >
                 {props.images.map((image, index) => (
                   <SplideSlide key={index}>
                     <Zoom>
@@ -92,10 +90,12 @@ export function Project(props) {
               </Splide>
             )}
 
-
-            {props.ascii !== undefined &&
-              <AsciinemaPlayer src={props.ascii}
-                               autoplay={props.autoplay || false} />}
+            {props.ascii !== undefined && (
+              <AsciinemaPlayer
+                src={props.ascii}
+                autoplay={props.autoplay || false}
+              />
+            )}
           </div>
         </div>
       </div>

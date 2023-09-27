@@ -1,28 +1,27 @@
 module.exports = {
-  url: `https://www.xrths.fr`,
+  url: `https://thomasroux.me`,
   logo: `src/images/commons/logo.png`,
-  defaultTitle: `Thomas ROUX - Portfolio`,
+  defaultTitle: `Thomas ROUX - Apprentice Software Engineer`,
   shortName: `Thomas R.`,
   author: `Thomas ROUX`,
-  keywords: ['Thomas', 'ROUX', 'Génie logiciel', 'xrths', 'portfolio'],
-  username: `@xrths`,
-  email: `contact@xrths.fr`,
-  description: `Étudiant en troisième année de Licence Informatique à l'Université Aix-Marseille. Je suis à la recherche d'un stage de fin d'études pour la période de Avril à Juillet 2023.`,
+  keywords: ["Thomas", "ROUX", "Génie logiciel", "thomas-rx", "portfolio"],
+  username: `@thmsrx`,
+  email: `contact@thomasroux.me`,
+  description: `Currently an apprentice software engineer at Capgemini, I am pursuing my Master's in Software Science at the Faculty of Sciences of Toulouse.`,
 
   socialLinks: {
-    linkedin: `https://www.linkedin.com/in/xrths`,
-    github: `https://github.com/xrths`,
-    twitter: `https://twitter.com/xrths`,
-    malt: `https://www.malt.fr/profile/xrths`,
+    linkedin: `https://www.linkedin.com/in/thmsrx/`,
+    github: `https://github.com/thomas-rx/`,
+    twitter: `https://x.com/thmsrx`,
   },
 
   projectLinks: {
-    wordly: 'https://wordly.xrths.fr',
+    wordly: "https://wordly.xrths.fr",
   },
 
   matomo: {
     siteId: 11,
     urlBase: "https://analytics.xrths.cloud/",
-    trackerUrl: "https://analytics.xrths.cloud/matomo.php"
+    trackerUrl: "https://analytics.xrths.cloud/matomo.php",
   },
 };
